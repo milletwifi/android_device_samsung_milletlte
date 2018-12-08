@@ -29,4 +29,4 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1866465280
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/samsung/ms013g/BoardConfigVendor.mk
+-include vendor/samsung/matisselte/BoardConfigVendor.mk

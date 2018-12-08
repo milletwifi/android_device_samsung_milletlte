@@ -1,2 +1,3 @@
-add_lunch_combo cm_matisselte-eng
-add_lunch_combo cm_matisselte-userdebug
+for i in eng userdebug user; do
+	add_lunch_combo lineage_matisselte-${i}
+done

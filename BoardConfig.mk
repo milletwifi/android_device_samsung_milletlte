@@ -15,6 +15,9 @@
 # inherit from common matisse-common
 -include device/samsung/matisse-common/BoardConfigCommon.mk
 
+# Recovery
+TARGET_OTA_ASSERT_DEVICE := matisselte,matisseltexx
+
 DEVICE_PATH := device/samsung/matisselte
 
 # Kernel

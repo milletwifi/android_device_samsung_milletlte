@@ -21,7 +21,7 @@ TARGET_OTA_ASSERT_DEVICE := matisselte,matisseltexx
 DEVICE_PATH := device/samsung/matisselte
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_matisselte_defconfig
+TARGET_KERNEL_CONFIG := matisselte_defconfig
 
 # Partitions
 TARGET_USERIMAGES_USE_F2FS := true

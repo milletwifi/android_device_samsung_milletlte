@@ -22,6 +22,11 @@ $(call inherit-product-if-exists, vendor/samsung/matisselte/matisselte-vendor.mk
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Data line Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.cdma.xml \	
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.gsm.xml
+
 # common
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
 

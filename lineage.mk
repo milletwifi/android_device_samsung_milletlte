@@ -16,8 +16,8 @@
 $(call inherit-product, device/samsung/matisselte/full_matisselte.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
-$(call inherit-product, vendor/lineage/config/telephony.mk)
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/cm/config/telephony.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := SM-T535

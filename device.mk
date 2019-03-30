@@ -5,7 +5,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+#	  http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -22,10 +22,25 @@ $(call inherit-product-if-exists, vendor/samsung/matisselte/matisselte-vendor.mk
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.telephony.default_network=0 \
+	telephony.lteOnGsmDevice=1 \
+	persist.data.netmgrd.qos.enable=false \
+	persist.data.qmi.adb_logmask=0 \
+	persist.radio.add_power_save=1 \
+	rild.libargs=-d /dev/smd0 \
+	rild.libpath=/system/lib/libsec-ril.so \
+	ro.telephony.ril_class=SamsungMSM8226RIL \
+	ro.telephony.ril.config=simactivation \
+	ro.use_data_netmgrd=false \
+	persist.radio.no_wait_for_card=true \
+	keyguard.no_require_sim=true
+
 # Data line Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.cdma.xml \	
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.gsm.xml
+	frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.cdma.xml \
+	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # common
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)

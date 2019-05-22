@@ -18,7 +18,7 @@
 set -e
 
 export DEVICE=milletlte
-export DEVICE_COMMON=matisse-common
+export DEVICE_COMMON=millet-common
 export VENDOR=samsung
 
 ./../$DEVICE_COMMON/setup-makefiles.sh $@

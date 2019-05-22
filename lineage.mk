@@ -13,13 +13,13 @@
 # limitations under the License.
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/matisselte/full_matisselte.mk)
+$(call inherit-product, device/samsung/milletlte/full_milletlte.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, vendor/cm/config/telephony.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := SM-T535
-PRODUCT_DEVICE := matisselte
-PRODUCT_NAME := lineage_matisselte
+PRODUCT_RELEASE_NAME := SM-T335
+PRODUCT_DEVICE := milletlte
+PRODUCT_NAME := lineage_milletlte

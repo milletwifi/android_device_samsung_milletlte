@@ -17,7 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/matisselte/matisselte-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/milletlte/milletlte-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -43,7 +43,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # common
-$(call inherit-product, device/samsung/matisse-common/matisse.mk)
+$(call inherit-product, device/samsung/millet-common/millet.mk)
 
 # TODO: opengapps
 $(call inherit-product, vendor/Gapps-Preloader/opengapps.mk)

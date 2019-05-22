@@ -18,7 +18,7 @@
 set -e
 
 export DEVICE=matisselte
-export DEVICE_COMMON=matisse-common
+export DEVICE_COMMON=millet-common
 export VENDOR=samsung
 
 ./../$DEVICE_COMMON/extract-files.sh $@

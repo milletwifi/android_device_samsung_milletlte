@@ -12,16 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common matisse-common
--include device/samsung/matisse-common/BoardConfigCommon.mk
+# inherit from common millet-common
+-include device/samsung/millet-common/BoardConfigCommon.mk
 
 # Recovery
-TARGET_OTA_ASSERT_DEVICE := matisselte,matisseltexx
+TARGET_OTA_ASSERT_DEVICE := milletlte,milletltexx
 
-DEVICE_PATH := device/samsung/matisselte
+DEVICE_PATH := device/samsung/milletlte
 
 # Kernel
-TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matisselte_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_milletlte_defconfig
 
 # Partitions
 TARGET_USERIMAGES_USE_F2FS := true
@@ -32,4 +32,4 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1866465280
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/samsung/matisselte/BoardConfigVendor.mk
+-include vendor/samsung/milletlte/BoardConfigVendor.mk

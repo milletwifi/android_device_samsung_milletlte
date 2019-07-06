@@ -16,7 +16,7 @@
 -include device/samsung/millet-common/BoardConfigCommon.mk
 
 # Recovery
-TARGET_OTA_ASSERT_DEVICE := milletlte,milletltexx
+TARGET_OTA_ASSERT_DEVICE := milletlte,milletltetmo,milletltexx
 
 DEVICE_PATH := device/samsung/milletlte
 

@@ -33,14 +33,14 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Radio
 TARGET_RIL_VARIANT := caf
-BOARD_PROVIDES_LIBRIL := true
+BOARD_PROVIDES_LIBRIL := false
 
 # Custom RIL class
-BOARD_RIL_CLASS := ../../../$(VENDOR_PATH)/ril
+BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
 
 # Radio
 PRODUCT_PACKAGES += \
-    libril_shim \
+    libril_shim
 	libril
 
 # Properties

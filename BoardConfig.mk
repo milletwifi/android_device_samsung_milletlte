@@ -41,13 +41,9 @@ BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
 # Radio
 PRODUCT_PACKAGES += \
     libril_shim
-	libril
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-# TODO: RIL
--include device/samsung/msm8226-common/radio/Android.mk
 
 # inherit from the proprietary version
 -include vendor/samsung/milletlte/BoardConfigVendor.mk

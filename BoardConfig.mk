@@ -21,6 +21,7 @@ TARGET_OTA_ASSERT_DEVICE := milletlte,milletltetmo,milletltexx
 DEVICE_PATH := device/samsung/milletlte
 
 # Kernel
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
 TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_milletlte_defconfig
 
 # Partitions
@@ -31,9 +32,11 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1866465280
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
-# Radio
+# RIL
+#BOARD_VENDOR := samsung
+#BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet0"
+BOARD_PROVIDES_LIBRIL := true
 TARGET_RIL_VARIANT := caf
-BOARD_PROVIDES_LIBRIL := false
 
 # Custom RIL class
 BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
@@ -44,6 +47,9 @@ PRODUCT_PACKAGES += \
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
+# Build
+BLOCK_BASED_OTA := true
 
 # inherit from the proprietary version
 -include vendor/samsung/milletlte/BoardConfigVendor.mk
